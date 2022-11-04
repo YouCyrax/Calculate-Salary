@@ -52,18 +52,24 @@ public class MainActivity extends AppCompatActivity {
                 } else if (state.equals("s")){
                     if (age < 30) {
                         result = 1500 + (age * 5);
+                        textViewResult.setText("Your salary = $ " + result);
+
                     }else if (age >= 30 && age < 50){
                         result = 1800 + (age * 50);
+                        textViewResult.setText("Your salary = $ " + result);
+
                     }else if (age >= 50){
                         result = 1800 + (age * 5);
+                        textViewResult.setText("Your salary = $ " + result);
+
                     }else {
                         Toast.makeText(MainActivity.this, "Enter m for married, s for single", Toast.LENGTH_SHORT).show();
-                        result = 0;
+                        textViewResult.setText("Your salary = $ " + result);
+
                     }
                 }else {
-
+                    textViewResult.setText("Error!");
                 }
-                textViewResult.setText("Your salary = $ " + result);
             }
         });
 
